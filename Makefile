@@ -1,6 +1,6 @@
-NAME := NotKernel
+NAME := SadKernel
 
-CODE := Lavender
+CODE := X01BD
 
 ZIP := $(NAME)-$(CODE).zip
 
