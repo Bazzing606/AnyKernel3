@@ -220,7 +220,7 @@ do_devicecheck() {
     done;
   done;
   if [ ! "$match" ]; then
-    abort " " "Unsupported device. Aborting...";
+    abort " " "Unsupported device. Aborting... :( ";
   fi;
 }
 int2ver() {
@@ -256,7 +256,7 @@ do_versioncheck() {
   if [ "$supported" ]; then
     ui_print "$android_ver" " ";
   else
-    abort " " "Unsupported Android version. Aborting...";
+    abort " " "Unsupported Android version. Aborting... :( ";
   fi;
 }
 do_levelcheck() {
@@ -279,7 +279,7 @@ do_levelcheck() {
   if echo -e "$hi_lvl\n$lo_lvl\n$parsed_lvl" | $BB sort -g | $BB grep -n "$parsed_lvl" | $BB grep -q '^2:'; then
     ui_print "$android_lvl" " ";
   else
-    abort " " "Unsupported Android security patch level. Aborting...";
+    abort " " "Unsupported Android security patch level. Aborting... :( ";
   fi;
 }
 dump_moduleinfo() {
@@ -366,7 +366,7 @@ mkdir -p $AKHOME/bin;
 cd $AKHOME;
 unzip -o "$ZIPFILE";
 if [ $? != 0 -o ! "$(ls tools)" ]; then
-  abort "Unzip failed. Aborting...";
+  abort "Unzip failed. Aborting... :( ";
 fi;
 for ARCH32 in x86 arm; do
   if [ -d $AKHOME/tools/$ARCH32 ]; then
@@ -384,7 +384,7 @@ chmod 755 $BB;
 $BB chmod -R 755 tools bin;
 $BB --install -s bin;
 if [ $? != 0 -o -z "$(ls bin)" ]; then
-  abort "Busybox setup failed. Aborting...";
+  abort "Busybox setup failed. Aborting... :( ";
 fi;
 
 if [ -f banner ]; then
@@ -423,4 +423,5 @@ if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
   cleanup;
 fi;
 
-ui_print " " " " "Thankyou for your Valuable Data!";
+ui_print " - Done!";
+ui_print " - SadKernel - Asus Zenfone Max Pro M2 (X01BD/A) ";
