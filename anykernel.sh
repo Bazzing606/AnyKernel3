@@ -4,13 +4,13 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-do.devicecheck=0
+do.devicecheck=1
 do.modules=0
-do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=X01BD
-supported.versions=
+device.name2=X01BDA
+supported.versions=9 - 10
 supported.patchlevels=
 '; } # end properties
 
