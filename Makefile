@@ -1,4 +1,4 @@
-NAME := SadKernel
+NAME := Alive Kernel (Pie)
 
 CODE := X01BD
 
