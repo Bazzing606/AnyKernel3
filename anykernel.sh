@@ -10,7 +10,7 @@ do.cleanup=1
 do.cleanuponabort=0
 device.name1=X01BD
 device.name2=X01BDA
-supported.versions=9 - 10
+supported.versions=9
 supported.patchlevels=
 '; } # end properties
 
